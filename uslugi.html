@@ -11,6 +11,7 @@
     <meta name="description" content="Budowa i serwis maszyn przemysłowych" />
     <link rel="stylesheet" href="css/integrator.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/uslugi.css">
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
@@ -23,7 +24,7 @@
 
 <header>
     <div id="amislogo">
-        <img src="img/logo.png" />
+        <img src="img/logo.png" alt="logo"/>
     </div>
     <div id="integrator">
         <ul>
@@ -126,7 +127,7 @@
 
     <div id="nav">
         <ol>
-            <li> <a href="index.html">O nas </a> </li>
+            <li> <a href="index.html ">O nas </a> </li>
             <li> <a href="# ">Nasze realizacje</a>
                 <ul>
                     <li>
@@ -173,21 +174,19 @@
 <div class="clear"> </div>
 
 <div id="content">
-    <div id="new-container">
-        <div class="logo">
-            <img src="img/logo.png" alt="logo">
+    <div class="holder">
+        <div class="slideshow">
+            <img src="img/programowanie_robotow_abb.jpg" alt="Slide 1" class="active">
+            <img src="img/programowania_robotow_spawalniczych.jpg" alt="Slide 2">
+            <img src="img/serwis_manipulatorow_abb.jpg" alt="Slide 3">
+            <img src="img/serwis_manipulatorow_motoman.jpg" alt="Slide 3">
         </div>
-        <div class="text">
-            <h1>
-                Twój partner w  <br> sukcesie twojego projektu
-            </h1>
+        <div class="text-info">
+            <h2>Serwis oraz Programowanie
+                Robotów ABB, Yaskawa, Motoman
+            </h2>
             <p>
-                Nasza firma specjalizuje sie w szerokim wachlarzu
-                usług. Specjalizujemy się w modernizacji, transferach, czyszczeniach, pracach prewencyjnych. Nasza historia to ponad 5 lat doświadczenia w przemyśle motoryzacyjnym, spożywczym, farmaceutycznym, elektrycznym, maszynowym.
-            </p>
-            <p>
-                Od dnia 14 pażdziernika posidamy certyikat potwierdzajaćyy wdrożenie systemu zarządzania jakością zgodnie z ISO 9001:2015
-                Wiećej informacji w zakładce Zarządzanie jakością
+                Posiadamy wieloletnie doświadczenie w serisuwaniu manipulatorów oraz szaf sterowniczych rbotów ABB S4C/S4C+, Yaskawa/Motoman MRC, XRC, DX-100, GX-100, NX-100. SZeroki wachlarz usług od konseracji wymina przkladni osi, silników napędowych, naprawa serwonapędów, smarowanie osi, Programowanie oraz implementacja i industrializacja robtów spawlniczych, zgrzewalniczych, ogólnego przenaczenia, chwytaków, stacji klejących
             </p>
         </div>
     </div>
@@ -195,10 +194,22 @@
 
 
 
-
-
 </body>
-<script src="js/active-link.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".slideshow img");
+        let currentSlide = 0;
+
+        function showNextSlide() {
+            slides[currentSlide].classList.remove("active");
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add("active");
+        }
+
+        setInterval(showNextSlide, 3000); // zmiana co 3 sekundy
+    });
+
+</script>
 
 
 </html>
