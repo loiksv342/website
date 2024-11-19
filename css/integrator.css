@@ -196,7 +196,7 @@ header #nav>ol>li>ul>li>a:hover {
 }
 
 #content {
-    height: 1200px;
+    height: 100%;
     padding: 80px 50px 50px;
     border-radius: 20px;
     border: 2px solid darkgray;
@@ -360,3 +360,55 @@ h4 {
     line-height: 50px;
 }
 /*SEKCJA STYLÓW jakosc.html*/
+:root {
+    --bgcolor: rgb(230, 230, 230);
+    --solidobject: -2px -2px 4px rgb(255, 255, 255),
+    2px 2px 4px rgba(0, 0, 0, 0.15);
+    --standardtrans: all 1s ease;
+    --fasttrans: all 0.25s ease;
+    --superfasttrans: all 0.15s ease;
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.certificate {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Równomierne rozłożenie certyfikatów */
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 20px; /* Dodatkowa przestrzeń dla responsywności */
+    background-color: #f9f9f9; /* Subtelne tło dla wyróżnienia */
+    border-radius: 10px; /* Zaokrąglenie rogów */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień dla elegancji */
+}
+
+.certificate img {
+    width: 300px;
+    height: auto; /* Automatyczne dostosowanie wysokości */
+    border: 2px solid #ccc; /* Subtelna ramka */
+    border-radius: 8px; /* Zaokrąglone rogi obrazów */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja przy interakcji */
+}
+
+.certificate img:hover {
+    transform: scale(1.05); /* Powiększenie na hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Mocniejszy cień */
+}
+
+.quality-text {
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+}
