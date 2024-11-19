@@ -1,0 +1,295 @@
+header #amis {
+    height: 100%;
+    color: #4444ff;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    padding-left: 30px;
+    font-size: 300%;
+    font-style: oblique;
+    font-weight: 700;
+    text-align: left;
+    float: left;
+    font-family: "Impact, Charcoal, sans-serif";
+    text-shadow: 2px 2px rgb(200, 200, 255);
+}
+
+header #nav {
+    float: right;
+    margin-right: 0px;
+}
+
+#nav li.active {
+    background-color: #4d75cc;  
+    color: white;
+}
+header #integrator {
+    float: left;
+    margin-left: 0px;
+}
+
+header #amislogo {
+    float: left;
+    margin-left: 0px;
+    height: 50px;
+}
+
+header>#amislogo>img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    border-right: 10px grove rgb(245, 156, 156);
+    margin: 10px;
+}
+
+header {
+    background-image: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(200, 200, 200) 65%, rgb(220, 220, 220) 85%, rgb(255, 255, 255) 100%);
+    background-color: rgb(255, 255, 255);
+    color: white;
+    width: 100%;
+    height: 80px;
+    margin-left: 0;
+    min-width: 1400px;
+    position: relative;
+    top: 0;
+}
+
+header #integrator ul li {
+    list-style-type: none;
+    float: left;
+    margin-left: 5px;
+    ;
+}
+
+header #integrator ul li a {
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    border-radius: 10 px;
+    padding: 7px;
+    color: black;
+    float: left;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+header #integrator ul li .integ {
+    display: none;
+    position: absolute;
+    clear: both;
+    color: black;
+}
+
+header #integrator ul li .integ h1 {
+    font-weight: 500%;
+    font-size: 120%;
+}
+
+header #integrator ul li .integ h2 {
+    font-weight: 700%;
+    font-size: 200%;
+}
+
+header #integrator ul li:hover {
+    color: black;
+    background-color: white;
+}
+
+header #integrator ul li:hover>a {
+    font-weight: bolder;
+    font-size: 130%;
+    color: red;
+}
+
+header #integrator ul li:hover>.integ {
+    display: block;
+    z-index: 100;
+    height: 300px;
+    width: 300px;
+    float: left;
+    top: 70px;
+    background-color: seashell;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+header #nav ol>li {
+    float: left;
+    list-style: none;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 7px;
+    background-image: linear-gradient(0deg, rgb(255, 255, 255), rgb(180, 180, 180));
+    height: 40px;
+    vertical-align: middle;
+}
+
+header #nav>ol>li>a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+header #nav>ol>li>ul {
+    position: fixed;
+    top: 72px;
+    width: 300px;
+    border: 2px dashed red;
+    margin-right: 5px;
+    border-radius: 5px;
+    display: none;
+    background-color: whitesmoke;
+    padding: 18px;
+}
+
+header #nav>ol>li:hover {
+    background-image: linear-gradient(0deg, rgb(188, 180, 180), rgb(255, 255, 255));
+    border: 2px dashed red;
+    transition: 2s;
+}
+
+header #nav>ol>li:hover>ul {
+    display: block;
+    width: 400px;
+    z-index: 102;
+}
+
+header #nav>ol>li>ul>li {
+    clear: both;
+    border: none;
+    display: block;
+    margin-top: 10px;
+    height: fit-content;
+    border-bottom: 1px dashed grey;
+    width: 100%;
+}
+
+header #nav>ol>li>ul>li>a {
+    border: none;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+header #nav>ol>li>ul>li>a:hover {
+    border: 2px dashed red;
+    background-image: linear-gradient(0deg, rgb(188, 180, 180), rgb(255, 255, 255));
+    transition: 0.5s;
+
+}
+
+#content {
+    padding: 80px 50px 50px; 
+    border-radius: 20px;
+    border: 2px solid darkgray;
+    border-right: 10px solid lightgrey;
+    border-bottom: 10px solid grey;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    min-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+body {
+    clear: both;
+    position: relative;
+    height: 100%;
+    margin: 0 !important;
+}
+
+.fleft {
+    float: left;
+}
+
+.clear {
+    clear: both
+}
+#content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; 
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+/* SEKCJA KONTAKTU */
+.contactData, .contact, .contactUs {
+    flex: 1;
+    min-width: 280px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactData img, .contactUs img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contactData:hover, .contact:hover, .contactUs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#subtext {
+    display: block;
+    margin: 8px 0;
+    font-size: 18   px;
+    color: #555;
+}
+
+.contact p,
+.contactData {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contactUs p {
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    font-size: 18px;
+}
+#content a {
+    text-decoration: none;
+    color: #0056b3;
+}
+
+
+
