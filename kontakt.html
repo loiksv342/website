@@ -14,20 +14,26 @@
     <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.cycle.all.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
     <!--[if lt IE 9]>
 		<script type="text/javascript" src="js/html5.js"></script>
 	<![endif]-->
 </head>
 
 <body>
-
-    <header>
-        <div id="amislogo">
-            <img src="img/logo.png" alt="logo"/>
+<header id="navbar">
+    <nav class="navbar-container container">
+        <img src="img/logo_white_removed.png" alt="Logo" class="navbar-logo">
+        <div class="logo">
         </div>
+        <a href="/" class="home-link"></a>
         <div id="integrator">
             <ul>
-
                 <li><a>I</a>
                     <div class="integ">
                         <h1>Inżynieria mechaniczna</h1>
@@ -123,58 +129,27 @@
             </ul>
         </div>
 
-
-        <div id="nav">
-            <ol>
-                <li> <a href="index.html ">O nas </a> </li>
-                <li> <a href="# ">Nasze realizacje</a>
-                    <ul>
-                        <li>
-                            <a href="">
-                            Budowa Maszyn</a>
-                        </li>
-                        <li>
-                            <a href="">
-                            Transfer maszyn i linii produkcyjnych </a>
-                        </li>
-
-                    </ul>
-
-
-
-                </li>
-                <li> <a href="klienci.html">Klienci</a> </li>
-                <li> <a href="jakosc.html">Polityka Jakości</a>
-                    <ul>
-                        <li>
-                            <a href="">
-                                Certyfikat ISO Anglieski</a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Certyfikat ISO Polski </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Certyfikat ISO Polski </a>
-                        </li>
-
-                    </ul>
-
-
-                </li>
-                <li> <a href="kontakt.html">Kontakt</a> </li>
-                <li style="background-image: linear-gradient(0deg, rgb(77, 117, 204), rgb(10, 4, 66))"><a href="https://www.facebook.com/amis.piotr.rynski"><i style="color: white; font-size: 80%;" class="fa fa-facebook"></i></a></li>
-            </ol>
-
+        <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+                <li class="navbar-item"><a class="navbar-link" href="index.html">O nas</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="uslugi.html">Nasze Realizacje</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="klienci.html">Klienci</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="jakosc.html">Polityka Jakości</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
+            </ul>
         </div>
+    </nav>
 
-    </header>
+</header>
     <div class="clear"> </div>
-
     <div id="content">
         <div class="contactData">
-            <h1>Dane kontaktowe</h2>
+            <h1>Dane kontaktowe</h1>
             <img src="img/contactImg.jpg" alt="contactImage">
             <h4>AMIS Piotr Ryński</h4>
             <span id="subtext">05-600 Grójec</span>
@@ -182,17 +157,17 @@
             <span id="subtext">NIP: 866-152-22-83</span>
             <span id="subtext">GSM: +48 669 982 077</span>
             <span id="subtext">Email:
-                <a href="mailto:piotr.rynski@amis.eu.com">piotr.rynski@amis.eu.com</a> 
+                <a href="mailto:piotr.rynski@amis.eu.com">piotr.rynski@amis.eu.com</a>
             </span>
         </div>
         <div class="contact">
-            <h1>Kontakt</h2>
+            <h1>Kontakt</h1>
             <h4 class="contact-heading">Właściciel</h4>
             <p>Piotr Ryński</p>
             <p>GMS: +48 669 982 077</p>
             <p>
                 Email:
-                <a href="mailto:piotr.rynski@amis.eu.com">piotr.rynski@amis.eu.com</a>    
+                <a href="mailto:piotr.rynski@amis.eu.com">piotr.rynski@amis.eu.com</a>
             </p>
             <h4 class="contact-heading">Autotmatyka i sterowanie</h4>
             <p>Jerzy Trzmielewski</p>
@@ -218,12 +193,16 @@
         </div>
         <div class="contactUs">
             <h1>Skontaktuj się z nami</h1>
-            <img src="img/contactUs.jpg" alt="contactUs">
+            <img src="img/contactUs.jpg" id="people" alt="contactUs">
             <p>Zadzwoń lub skontaktuj sie z nami.</p>
             <p>Może okazać się, że rozwiązanie twojego problemu wcale nie jest trudne ani nierealne.</p>
+            <h1 id="map-heading">Tutaj jesteśmy</h1>
+            <div id="map" style="width: 100%"></div>
         </div>
+
     </div>
 
 </body>
-<script src="js/active-link.js"></script>
+<script src="js/location-map.js"></script>
+<script src="js/navbar-responsive-toggle.js"></script>
 </html>

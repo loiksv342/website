@@ -1,3 +1,102 @@
 #content {
+    align-items: center;
+    flex-direction: column;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1); /* Gradient tła */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 1s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: 1s;
+}
+
+.slider-container {
+    width: 45%;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.1)); /* Gradient na kontenerze slidera */
+    transition: all 0.3s ease;
+}
+
+.slider-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Efekt hover na kontenerze slidera */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+}
+
+.slide, .slider-container img {
+    width: 450px;
+    height: 356px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.text-container {
+    width: 45%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.text-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.text-container p {
+    font-size: 16px;
+    color: #555;
 }
