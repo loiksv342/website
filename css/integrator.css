@@ -1,22 +1,12 @@
 :root {
-    --bgcolor: rgb(230,230,230);
     --bodybgcolor: rgb(200,200,200);
     --solidobject: -2px -2px 4px rgb(255,255,255), 2px 2px 4px rgba(0,0,0,0.15);
-    --standardtrans: all 1s ease;
     --fasttraans: all 0.25s ease;
-    --bgcolor: rgb(230,230,230);
-    --bodybgcolor: rgb(200,200,200);
-    --solidobject: -2px -2px 4px rgb(255,255,255), 2px 2px 4px rgba(0,0,0,0.15);
-    --standardtrans: all 1s ease;
-    --fasttrans: all 0.25s ease;
-    --superfasttrans: all 0.15s ease;
     --navbar-bg-color: hsl(0, 0%, 15%);
     --navbar-text-color: hsl(0, 0%, 85%);
     --navbar-text-color-focus: white;
     --navbar-bg-contrast: hsl(0, 0%, 25%);
-    --superfasttrans: all 0.15s ease;
     --bgcolor: rgb(230,230,230);
-    --solidobject: -2px -2px 4px rgb(255,255,255), 2px 2px 4px rgba(0,0,0,0.15);
     --standardtrans: all 1s ease;
     --fasttrans: all 0.25s ease;
     --superfasttrans: all 0.15s ease;
@@ -93,7 +83,7 @@ body {
 .contactData:hover, .contact:hover, .contactUs:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .text h1 {
@@ -129,6 +119,7 @@ h4 {
 .contactUs p {
     font-style: italic;
     color: #777;
+    margin: 10px;
     text-align: center;
     font-size: 18px;
 }
@@ -279,12 +270,7 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
-#integrator {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie poziome */
-    align-items: center;    /* Wyśrodkowanie pionowe */
-    height: 100%;           /* Dopasowanie do kontenera rodzica */
-}
+
 
 
 #navbar {
@@ -460,7 +446,7 @@ h4 {
   
 
     .navbar-item {
-        margin: 0 1rem;
+        margin: 0.4rem;
     }
 
     .navbar-links {
@@ -475,6 +461,10 @@ h4 {
     flex-direction: row;
     list-style: none;
     gap: 15px;
+    width: 40%;
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center;    /* Wyśrodkowanie pionowe */
+    height: 100%;           /* Dopasowanie do kontenera rodzica */
 }
 #integrator li {
     display: flex; /* Ustawia flexbox na elementy listy */
@@ -497,13 +487,7 @@ h4 {
     display: flex;
 }
 
-#integrator {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    width: 40%;
 
-}
 #integrator ul {
     display: flex;
     flex-direction: row;
@@ -589,7 +573,7 @@ header #integrator ul li:hover>.integ {
     #new-container {
         display: block;
     }
-    h1 {
+    .contactDat h1 {
         margin: 2px !important;
     }
     h4.contact-heading {
@@ -604,7 +588,8 @@ header #integrator ul li:hover>.integ {
 /* dla tabletow */
 /* Styl dla tabletów */
 @media (min-width: 768px) and (max-width: 1280px) {
-    #navbar {height: 120px;}
+    #navbar {height: 120px;  
+    } 
     #integrator { display: none; }
     header {
         min-width: 0;
