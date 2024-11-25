@@ -97,7 +97,7 @@ body {
 }
 
 .text h1 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -112,7 +112,7 @@ h4 {
     text-align: center;
 }
 
-#subtext {
+.subtext {
     display: block;
     margin: 8px 0;
     font-size: 18px;
@@ -233,10 +233,8 @@ h4 {
 /*SEKCJA DO RESPONSYWNOSCI */
 /* SEKCJA DLA NAVBAR*/
 
-@media only screen and (max-width: 1400px) {
-    #integrator {
-        display: none;
-    }
+@media only screen and (max-width: 769px) {
+
     body {
         overflow-x: hidden;
     }
@@ -304,7 +302,6 @@ h4 {
 }
 
 .navbar-container {
-    gap: 5px;
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -353,7 +350,6 @@ h4 {
     background-color: transparent;
     width: 200px;
     height: 50px;
-    margin-right: 0.5em;
 }
 
 #navbar-toggle {
@@ -410,7 +406,6 @@ h4 {
 }
 
 #navbar-toggle[aria-expanded="true"] + #navbar-menu {
-    background-color: rgba(0, 0, 0, 0.4);
     opacity: 1;
     visibility: visible;
 }
@@ -437,7 +432,6 @@ h4 {
         padding-left: 1.4rem;
         padding-right: 1.4rem;
     }
-    #integrator {display: none}
     #navbar-toggle,
     #navbar-toggle[aria-expanded="true"] {
         display: none;
@@ -463,9 +457,7 @@ h4 {
         height: 100%;
 
     }
-    #integrator {
-        display: none;
-    }
+  
 
     .navbar-item {
         margin: 0 1rem;
@@ -509,14 +501,13 @@ h4 {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap: 15px;
     width: 40%;
 
 }
 #integrator ul {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     justify-items: center;
     list-style-type: none;
 }
@@ -586,19 +577,94 @@ header #integrator ul li:hover>.integ {
     align-items: center;
     flex-wrap: wrap;
 }
-@media screen and (max-width: 768px){
-    #integrator {display: none}
-    #new-container {
-        display: block;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 1560px){
-    #integrator {display: none}
-    .navbar-logo {width: 180px;}
-    ul.navbar-links li a {width: 50%;padding: 0}
-    ul.navbar-links li {margin: 0;padding: 0}
-}
 #map {
     width: 200px;
     height: 200px;
+}
+/* dla telefonow */
+@media screen and (max-width: 767px){
+    #integrator {display: none}
+    .navbar-logo {margin-right: 20px;width: 200px;height: 64px;}
+    ul.navbar-links {background-color: #fff;}
+    #new-container {
+        display: block;
+    }
+    h1 {
+        margin: 2px !important;
+    }
+    h4.contact-heading {
+        font-size: 16px;
+    }
+    .quality-text {
+        flex-direction: column;
+    }
+    
+}
+
+/* dla tabletow */
+/* Styl dla tabletów */
+@media (min-width: 768px) and (max-width: 1280px) {
+    #navbar {height: 120px;}
+    #integrator { display: none; }
+    header {
+        min-width: 0;
+    }
+    /* Ustawienie nawigacji */
+    nav {
+        display: flex;
+        flex-direction: column; /* Logo na górze, reszta pod spodem */
+        align-items: center; /* Wyrównanie do środka */
+        padding: 20px;
+    }
+ 
+
+    /* Logo */
+    .navbar-logo {
+        display: block;
+        margin-bottom: 20px; /* Odstęp między logo a menu */
+        max-width: 200px; /* Opcjonalnie ograniczenie rozmiaru logo */
+    }
+
+    /* Główna lista menu (navbar-links) */
+    #navbar-menu {
+        width: 100%; /* Dopasowanie menu do szerokości */
+        display: flex;
+        flex-direction: column; /* Elementy menu w kolumnie */
+        align-items: center; /* Wyśrodkowanie */
+        gap: 10px; /* Odstęp między elementami menu */
+    }
+
+    ul.navbar-links {
+        list-style: none; /* Usunięcie kropek listy */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row; /* Elementy menu w jednej linii */
+        gap: 15px; /* Odstęp między linkami */
+    }
+
+    ul.navbar-links li {
+        margin: 0;
+    }
+
+    ul.navbar-links li a {
+        text-decoration: none; /* Bez podkreślenia */
+        color: #333; /* Kolor linków */
+        font-weight: bold;
+        padding: 10px 15px; /* Dodanie wewnętrznego marginesu */
+        border-radius: 5px; /* Lekko zaokrąglone rogi */
+        transition: background-color 0.3s ease;
+    }
+
+    ul.navbar-links li a:hover {
+        background-color: #ddd; /* Podświetlenie linków przy najechaniu */
+    }
+
+    /* Przycisk hamburgera (dla responsywności) */
+    #navbar-toggle {
+        display: none; /* Możemy ukryć, jeśli nie jest potrzebny w tym widoku */
+    }
+}
+@media screen and (max-width: 1024px) {
+    #integrator {display: none;}
 }
