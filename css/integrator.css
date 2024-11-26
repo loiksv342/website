@@ -436,6 +436,7 @@ header #integrator {
     margin-left: 0;
 }
 
+header #integrator ul li .integ span {font-size: 1.5em;font-weight: bold;}
 
 header #integrator ul li .integ {
     display: none;
