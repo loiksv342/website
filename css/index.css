@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.heading {
+    height: 250px !important;
+}
+
+.heading img {
+    width: 400px;
+    height: 160px;
+}
+
+#animated-text {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 100%; /* Zmieniono na 100% */
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    font-size: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Anonymous Pro', monospace;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Dopasowanie do szerokości kontenera */
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Text and Image Layout */
+.text-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    max-width: 900px;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #555;
+}
+
+.text-info img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .text-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-info img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #animated-text {
+        font-size: 22px;
+    }
+
+    .line-1 {
+        width: 90%; /* Zmieniono na 90% dla lepszego dopasowania */
+        font-size: 14px; /* Zmniejszenie rozmiaru czcionki */
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .heading img {
+        width: 295px;
+        height: 122px;
+    }
+}
