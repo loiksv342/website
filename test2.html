@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-theme = "light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
 
   <header id="navbar">
     <nav class="navbar-container container">
-        <img src="img/logo_white_removed.png" alt="Logo" class="navbar-logo">
+        <img src="img/logo12.png" alt="Logo" class="navbar-logo">
         <a href="/" class="home-link"></a>
         <div id="integrator">
             <ul>
@@ -129,10 +129,13 @@
                 <li class="navbar-item"><a class="navbar-link" href="klienci.html">Klienci</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="jakosc.html">Polityka Jakości</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
-                <li class="navbar-item" style="margin-left: 30px;height: 55%; width: 30%; display: flex;justify-content: center;border-radius: 5px;align-items: center;text-align: center;background-image: linear-gradient(0deg, rgb(77, 117, 204), rgb(10, 4, 66))">
+                <li style="margin-left: 30px;height: 50%; width: 30%; display: flex;justify-content: center;border-radius: 5px;align-items: center;text-align: center;background-image: linear-gradient(0deg, rgb(77, 117, 204), rgb(10, 4, 66))">
                     <a href="https://www.facebook.com/amis.piotr.rynski">
                         <i style="color: white; font-size: 80%;" class="fa fa-facebook"></i>
                     </a>
+                </li>
+                <li style="margin-left: 10px;" id="toggle-dark-mode">
+                    <img id="theme-image" style="width: 32px;height: 32px;" src="img/light-theme.png" alt="theme-toggle">
                 </li>
             </ul>
         </div>
@@ -155,8 +158,12 @@
             </p>
         </div>
     </div>
+    <button id="toggle-dark-mode">TEST</button>
+
+
 </main>
 <script src="js/navbar-responsive-toggle.js"></script>
 <script src="js/active-link.js"></script>
+<script src="js/theme-toggle.js"></script>
 </body>
 </html>

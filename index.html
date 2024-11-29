@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-theme = "light">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="keywords" content="AMIS, Piotr, Ryński, kontakt, mazowieckie,przemysł,transfer,transfery,czyszczenie,programowanie,maszyn,maszyny,linie,produkcyjne,autoatyka,roboty,abb,mottoman,siemens,omron,keyence,turck,banner,czujniki,przewody,utrzymanie,ruchu,budynkow,maszyn,starostwo,10/6,05-600,Grójec">
+    <meta name="keywords" content="AMIS, Piotr, Ryński, kontakt, mazowieckie, przemysł, transfer, transfery, czyszczenie, programowanie, maszyn, maszyny, linie, produkcyjne, autoatyka, roboty, abb, mottoman, siemens, omron, keyence, turck, banner, czujniki, przewody, utrzymanie, ruchu, budynkow, maszyn, starostwo, 10/6, 05-600, Grójec">
     <meta name="author" content="Jerzy Trzmielewski">
     <title>AmIS Piotr Ryński</title>
     <meta name="description" content="Budowa i serwis maszyn przemysłowych">
     <link rel="stylesheet" href="css/navbar-responsive.css">
     <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/integrator.css" type="text/css" media="all">
-
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-<header id="navbar">
+  <header id="navbar">
     <nav class="navbar-container container">
-        <img src="img/logo_white_removed.png" alt="Logo" class="navbar-logo">
+        <img src="img/logo12.png" alt="Logo" class="navbar-logo">
         <a href="/" class="home-link"></a>
         <div id="integrator">
             <ul>
@@ -129,39 +129,40 @@
                 <li class="navbar-item"><a class="navbar-link" href="klienci.html">Klienci</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="jakosc.html">Polityka Jakości</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="kontakt.html">Kontakt</a></li>
-                <li class="navbar-item" style="margin-left: 30px;height: 55%; width: 30%; display: flex;justify-content: center;border-radius: 5px;align-items: center;text-align: center;background-image: linear-gradient(0deg, rgb(77, 117, 204), rgb(10, 4, 66))">
+                <li style="margin-left: 30px;height: 50%; width: 30%; display: flex;justify-content: center;border-radius: 5px;align-items: center;text-align: center;background-image: linear-gradient(0deg, rgb(77, 117, 204), rgb(10, 4, 66))">
                     <a href="https://www.facebook.com/amis.piotr.rynski">
                         <i style="color: white; font-size: 80%;" class="fa fa-facebook"></i>
                     </a>
+                </li>
+                <li style="margin-left: 10px;" id="toggle-dark-mode">
+                    <img id="theme-image" style="width: 32px;height: 32px;" src="img/light-theme.png" alt="theme-toggle">
                 </li>
             </ul>
         </div>
     </nav>
 
 </header>
-<div class="clear"></div>
-
-<div id="content">
-    <div id="new-container">
-        <div class="logo">
-            <img src="img/logo.png" alt="logo">
+<main>
+    <div id="content">
+        <div class="heading">
+            <img src="img/logo_white_removed.png" alt="Logo">
+            <div id="animated-text">
+                <div class="line-1 anim-typewriter">Twój partner w sukcesie twojego projektu</div>
+            </div>
         </div>
-        <div class="text">
-            <h1>
-                Twój partner w  <br> sukcesie twojego projektu
-            </h1>
+
+        <div class="text-info">
+            <img src="img/relokacja.jpg" alt="relokacja">
             <p>
-                Nasza firma specjalizuje sie w szerokim wachlarzu
-                usług. Specjalizujemy się w modernizacji, transferach, czyszczeniach, pracach prewencyjnych. Nasza historia to ponad 5 lat doświadczenia w przemyśle motoryzacyjnym, spożywczym, farmaceutycznym, elektrycznym, maszynowym.
-            </p>
-            <p>
-                Od dnia 14 pażdziernika posidamy certyfikat potwierdzajaćyy wdrożenie systemu zarządzania jakością zgodnie z ISO 9001:2015
-                więcej informacji w zakładce Zarządzanie jakością
+                Nasza firma specjalizuje się w szerokim wachlarzu usług. Specjalizujemy się w modernizacji, transferach, czyszczeniach, pracach prewencyjnych. Nasza historia to ponad 5 lat doświadczenia w przemyśle motoryzacyjnym, spożywczym, farmaceutycznym, elektrycznym, maszynowym. Od dnia 14 października posiadamy certyfikat potwierdzający wdrożenie systemu zarządzania jakością zgodnie z ISO 9001:2015. Więcej informacji w zakładce Zarządzanie jakością.
             </p>
         </div>
     </div>
-</div>
+
+
+</main>
 <script src="js/navbar-responsive-toggle.js"></script>
 <script src="js/active-link.js"></script>
+<script src="js/theme-toggle.js"></script>
 </body>
 </html>

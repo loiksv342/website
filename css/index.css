@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
-
 #content {
     display: flex;
     justify-content: center;
@@ -82,7 +81,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Styles */
+/* responsywność tylko dla napisu */
 @media (max-width: 768px) {
     .text-info {
         flex-direction: column;
