@@ -1,3 +1,5 @@
+/* ten css tylko odpowiada za animowany tekst w idnex.html */
+
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
 #content {
     display: flex;
@@ -8,9 +10,6 @@
     text-align: center;
 }
 
-.heading {
-    height: 250px !important;
-}
 
 .heading img {
     width: 400px;
@@ -60,7 +59,7 @@
     }
 }
 
-/* Text and Image Layout */
+/* style dla obrazka fabryki w index.html */
 .text-info {
     display: flex;
     justify-content: flex-start;
@@ -73,12 +72,11 @@
 }
 
 .text-info img {
-    width: 300px;
+    width: 40%;
     height: auto;
     margin-right: 20px;
     flex-shrink: 0;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* responsywność tylko dla napisu */

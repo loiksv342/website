@@ -1,8 +1,26 @@
-let currentIndex = [0, 0, 0, 0, 0]; // Tablica do śledzenia aktualnego indeksu dla każdego slidera
+function moveSlide(direction, sliderIndex) {
+    const sliders = document.querySelectorAll('.slider');
+    
+    sliders.forEach((slider, index) => {
+        if (index === sliderIndex) {
+            const slides = slider.children;
+            let currentSlide = parseInt(slider.getAttribute('data-current-slide')) || 0;  // Pobieramy aktualny slajd z atrybutu
 
-moveSlide = (step, sliderIndex)  => {
-    const slides = document.querySelectorAll(`.section:nth-child(${sliderIndex + 1}) .slide`);
-    const totalSlides = slides.length;
-    currentIndex[sliderIndex] = (currentIndex[sliderIndex] + step + totalSlides) % totalSlides;
-    document.querySelectorAll(`.section:nth-child(${sliderIndex + 1}) .slider`)[0].style.transform = `translateX(-${currentIndex[sliderIndex] * 25}%)`;
+            // Oblicz nowy indeks slajdu
+            currentSlide += direction;
+
+            // Sprawdź, czy nie przekroczono zakresu
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            } else if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+            // Ustaw atrybut data-current-slide na nowy indeks
+            slider.setAttribute('data-current-slide', currentSlide);
+
+            // Ustaw transformację, aby przesunąć slajdy
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    });
 }

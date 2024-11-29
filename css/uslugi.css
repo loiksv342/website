@@ -1,26 +1,21 @@
-#content {
-    align-items: center;
-    flex-direction: column;
-}
-
 .section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1000px;
-    margin-bottom: 40px;
-    padding: 10px;
+    margin: 20px 0;
+    padding: 20px;
     background: linear-gradient(to bottom, #ffffff, #f1f1f1); /* Gradient tła */
-    border-radius: 10px;
+    background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     transition: transform 1s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    transition: 1s;
 }
 
 .slider-container {
@@ -41,18 +36,21 @@
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 400%;
+    transition: transform 0.5s ease-in-out; /* Animacja przesuwania */
+    width: 100%;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%; 
+    height: auto; 
 }
 
 .slide, .slider-container img {
-    width: 450px;
-    height: 356px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
-button {
+.btn-slide {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -66,7 +64,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btn-slide:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -75,7 +73,6 @@ button:hover {
 
 .text-container {
     width: 45%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,6 +81,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .text-container:hover {
@@ -91,12 +90,73 @@ button:hover {
 }
 
 .text-container h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
     color: #333;
 }
 
 .text-container p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #555;
+}
+
+@media (max-width: 1200px) {
+    .slider {
+        width: 80%; /* Zmniejszamy szerokość slidera na dużych ekranach */
+        margin: 0 auto; /* Wyrównujemy slider na środku */
+    }
+
+    .text-container h1 {
+        font-size: 1.3rem; /* Zmniejszamy rozmiar nagłówka */
+    }
+
+    .text-container p {
+        font-size: 0.9rem; /* Zmniejszamy czcionkę w paragrafie */
+    }
+}
+
+@media (max-width: 992px) {
+    .slider {
+        width: 90%; /* Zmniejszamy szerokość slidera na średnich ekranach */
+    }
+
+    .text-container h1 {
+        font-size: 1.2rem; /* Zmniejszamy rozmiar nagłówka */
+    }
+
+    .text-container p {
+        font-size: 0.85rem; /* Zmniejszamy czcionkę w paragrafie */
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        width: 100%; /* Zwiększamy szerokość slidera na małych ekranach */
+    }
+
+    .text-container h1 {
+        font-size: 1rem; /* Zmniejszamy rozmiar nagłówka */
+    }
+
+    .text-container p {
+        font-size: 0.8rem; /* Zmniejszamy czcionkę w paragrafie */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        width: 100%; /* Slider zajmuje pełną szerokość ekranu */
+    }
+
+    .text-container h1 {
+        font-size: 1rem; /* Utrzymujemy rozmiar nagłówka */
+    }
+
+    .text-container p {
+        font-size: 0.75rem; /* Zmniejszamy czcionkę w paragrafie */
+    }
+
+    .btn-slide {
+        padding: 8px; /* Mniejsze przyciski na małych ekranach */
+    }
 }
