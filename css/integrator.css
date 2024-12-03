@@ -265,9 +265,7 @@ header {
 
 .home-link img {
 	width: 200px;
-	/* Szerokość */
 	height: 60px;
-	/* Wysokość */
 	border-radius: 15%;
 }
 
@@ -387,24 +385,17 @@ header {
 	display: flex;
 	flex-direction: row;
 	list-style: none;
-	width: 40%;
+	width: 30%;
 	justify-content: center;
-	/* Wyśrodkowanie poziome */
 	align-items: center;
-	/* Wyśrodkowanie pionowe */
 	height: 100%;
-	/* Dopasowanie do kontenera rodzica */
 }
 
 #integrator li {
 	display: flex;
-	/* Ustawia flexbox na elementy listy */
 	justify-content: center;
-	/* Wyśrodkowanie poziome */
 	align-items: center;
-	/* Wyśrodkowanie pionowe */
 	text-align: center;
-	/* Dodatkowe centrowanie tekstu */
 	color: #000f;
 	border: 1px solid mediumvioletred;
 	width: 25px;
@@ -677,23 +668,17 @@ header #integrator ul li:hover>.integ {
 	nav {
 		display: flex;
 		flex-direction: column;
-		/* Logo na górze, reszta pod spodem */
 		align-items: center;
-		/* Wyrównanie do środka */
 		padding: 20px;
 	}
 
 	/* Główna lista menu (navbar-links) */
 	#navbar-menu {
 		width: 100%;
-		/* Dopasowanie menu do szerokości */
 		display: flex;
 		flex-direction: column;
-		/* Elementy menu w kolumnie */
 		align-items: center;
-		/* Wyśrodkowanie */
 		gap: 10px;
-		/* Odstęp między elementami menu */
 	}
 
 	ul.navbar-links {
@@ -702,8 +687,7 @@ header #integrator ul li:hover>.integ {
 		margin: 0;
 		display: flex;
 		flex-direction: row;
-		/* Elementy menu w jednej linii */
-		width: 120%;
+		width: 120%;	/* elementy w jednej linii */
 	}
 
 	ul.navbar-links li {
@@ -720,7 +704,6 @@ header #integrator ul li:hover>.integ {
 
 	ul.navbar-links li a:hover {
 		background-color: #ddd;
-		/* Podświetlenie linków przy najechaniu */
 	}
 
 	#navbar-toggle {
@@ -760,7 +743,7 @@ header #integrator ul li:hover>.integ {
 	}
 
 	.navbar-link {
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 	/* ========================== Stylizacja menu ========================== */
@@ -777,10 +760,7 @@ header #integrator ul li:hover>.integ {
 		color: #D8DEE9;
 		/* Jasny, elegancki szary tekst */
 		font-weight: bold;
-		border: none;
-		border-radius: 6px;
-		/* Zaokrąglone krawędzie dla nowoczesnego wyglądu */
-		margin: 2px;
+		border: 1px solid #273647;
 		/* Subtelny odstęp między elementami */
 	}
 
@@ -880,14 +860,5 @@ header #integrator ul li:hover>.integ {
 	.certificate {
 		background: none;
 	}
-
-}
-
-/* ========================== Animacje przejść ========================== */
-body,
-#content,
-header,
-.navbar-link {
-	transition: var(--transition-all);
 
 }
