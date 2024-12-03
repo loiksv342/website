@@ -637,8 +637,8 @@ header #integrator ul li:hover>.integ {
     .section {flex-direction: column;} 
 
   
-    .text-container,.slider-container {width: 100%;height: 230px;}
-    .slider-container img {width: 100%;height: 100%;}
+    .text-container,.slider-container {width: 100%;height: auto;}
+    .slider-container img {width: 100%;height: 230px;}
     
 }
 
