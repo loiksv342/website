@@ -441,8 +441,13 @@ header #integrator {
 }
 
 header #integrator ul li .integ span {
-	font-size: 1.5em;
+	font-size: 20px;
 	font-weight: bold;
+	text-align: center;
+}
+header #integrator ul li .integ p {font-size: 16px;
+	margin-top: 20px;
+	text-align: left;
 }
 
 header #integrator ul li .integ {
