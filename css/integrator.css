@@ -93,25 +93,26 @@ header {
 	margin-bottom: 10px;
 	text-align: center;
 }
-
+#content a {text-decoration: none; color: #2f72bf;}
 #content h4 {
 	font-size: 20px;
 	font-weight: bold;
 	color: #444;
-	margin-top: 20px;
+	margin-top: 10px;
 	text-align: center;
 }
 
 .subtext {
 	display: block;
 	margin: 8px 0;
-	font-size: 18px;
+	font-size: 20px;
 	color: #555;
 }
+.contact a {margin-left: 5px;}
 
 .contact p,
 .contactData {
-	font-size: 18px;
+	font-size: 20px;
 	color: #333;
 	line-height: 1.6;
 	text-align: center;
@@ -119,21 +120,19 @@ header {
 
 .contactUs p {
 	font-style: italic;
-	color: #6a6a66;
+	font-weight: 500;
+	color: #000;
 	margin: 10px;
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 #content h1 {
-	margin: 20px;
+	margin: 1px;
 	text-align: center;
 }
 
-#content a {
-	text-decoration: none;
-	color: #0056b3;
-}
+
 
 #new-container {
 	display: flex;
@@ -141,6 +140,7 @@ header {
 	justify-content: space-between;
 	width: 100%;
 }
+
 
 .logo {
 	flex: 1;
@@ -286,7 +286,7 @@ header {
 	justify-content: center;
 	width: 100%;
 	font-weight: bold;
-	font-size: 13px;
+	font-size: 16px;
 	padding: 0.4em 0.8em;
 }
 
@@ -572,6 +572,14 @@ header #integrator ul li:hover>.integ {
 		width: 100%;
 		margin-bottom: 20px;
 	}
+	.contact p,
+	.contactData {
+		font-size: 16px;
+		color: #333;
+		line-height: 1.6;
+		text-align: center;
+	}
+
 
 	header,
 	#content,
@@ -592,6 +600,7 @@ header #integrator ul li:hover>.integ {
 }
 
 @media screen and (max-width: 767px) {
+	#content {width: auto;}
 	#integrator {
 		display: none
 	}
@@ -637,7 +646,7 @@ header #integrator ul li:hover>.integ {
     .section {flex-direction: column;} 
 
   
-    .text-container,.slider-container {width: 100%;height: auto;}
+    .text-container,.slider-container {width: 100%;height: auto;margin-top: 10px;}
     .slider-container img {width: 100%;height: 230px;}
     
 }
@@ -648,6 +657,7 @@ header #integrator ul li:hover>.integ {
 		height: 120px;
 	}
 
+
 	#integrator {
 		display: none;
 	}
@@ -655,14 +665,15 @@ header #integrator ul li:hover>.integ {
 	header {
 		min-width: 0;
 	}
+	.navbar-link {
+		font-size: 14px;
+	}
 
 	#content h1 {
-		font-size: 25px;
+		font-size: 32px;
 	}
 
-	#content p {
-		font-size: 16px;
-	}
+
 
 	.navbar-logo {
 		width: 200px;
@@ -748,7 +759,7 @@ header #integrator ul li:hover>.integ {
 	}
 
 	.navbar-link {
-		font-size: 13px;
+		font-size: 16px;
 	}
 
 	/* ========================== Stylizacja menu ========================== */
@@ -812,12 +823,10 @@ header #integrator ul li:hover>.integ {
 	}
 
 	/* ========================== Obróbka obrazów ========================== */
-	img {
-		background-color: transparent;
-	}
+
 
 	img[src*="logo"] {
-		filter: brightness(1.2) contrast(1.1) invert(1);
+		filter: invert(1);
 	}
 
 	/* ========================== Tło nagłówka (header) ========================== */
@@ -828,7 +837,7 @@ header #integrator ul li:hover>.integ {
 	}
 
 	/* sekcja dla klienci.html */
-	#content a {
+	#content .row a {
 		color: #fff;
 	}
 
@@ -845,15 +854,21 @@ header #integrator ul li:hover>.integ {
 
 	/* sekcja dla kontakt.html */
 	.contactData,
+	
 	.contact,
 	.contactUs {
 		background: none;
 	}
+	.contact *,
+	.contactData * {
+		color: #fff;
+		text-decoration: none;
+	}
+	
 
 	#content h1,
 	#content h4,
-	#content span,
-	#content p {
+	#content p{
 		color: #fff;
 	}
 

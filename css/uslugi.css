@@ -6,7 +6,7 @@
     max-width: 1000px;
     margin: 20px 0;
     padding: 20px;
-    background: linear-gradient(to bottom, #ffffff, #f1f1f1); /* Gradient tła */
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1); 
     background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -20,23 +20,19 @@
 
 .slider-container {
     width: 45%;
-    height: 300px;
     overflow: hidden;
-    border: 2px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     position: relative;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.1)); /* Gradient na kontenerze slidera */
     transition: all 0.3s ease;
 }
 
 .slider-container:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Efekt hover na kontenerze slidera */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Animacja przesuwania */
+    transition: transform 0.5s ease-in-out; 
     width: 100%;
 }
 
@@ -88,75 +84,75 @@
 .text-container:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
-
-.text-container h1 {
+h1.gallery-heading{
     margin-bottom: 10px;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 32px;
 }
 
 .text-container p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 20px;
+    margin-top: 70px;
 }
 
 @media (max-width: 1200px) {
     .slider {
-        width: 80%; /* Zmniejszamy szerokość slidera na dużych ekranach */
-        margin: 0 auto; /* Wyrównujemy slider na środku */
+        width: 80%; 
+        margin: 0 auto; 
     }
 
     .text-container h1 {
-        font-size: 1.3rem; /* Zmniejszamy rozmiar nagłówka */
+        font-size: 1.3rem; 
     }
 
     .text-container p {
-        font-size: 0.9rem; /* Zmniejszamy czcionkę w paragrafie */
+        font-size: 0.9rem; 
     }
 }
-
+.slide {width: 100%;}
 @media (max-width: 992px) {
     .slider {
-        width: 90%; /* Zmniejszamy szerokość slidera na średnich ekranach */
+        width: 90%; 
     }
 
     .text-container h1 {
-        font-size: 1.2rem; /* Zmniejszamy rozmiar nagłówka */
+        font-size: 1.2rem; 
     }
 
-    .text-container p {
-        font-size: 0.85rem; /* Zmniejszamy czcionkę w paragrafie */
-    }
 }
 
 @media (max-width: 768px) {
     .slider {
-        width: 100%; /* Zwiększamy szerokość slidera na małych ekranach */
+        width: 100%;
     }
 
     .text-container h1 {
-        font-size: 1rem; /* Zmniejszamy rozmiar nagłówka */
+        font-size: 1rem; 
     }
 
     .text-container p {
-        font-size: 0.8rem; /* Zmniejszamy czcionkę w paragrafie */
+        margin-top: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .slider {
-        width: 100%; /* Slider zajmuje pełną szerokość ekranu */
+    .section {padding: 15px;}
+        .text-container {
+        margin: 10px 0;
     }
-
+    .slider {
+        width: 100%;
+    }
+    
     .text-container h1 {
-        font-size: 1rem; /* Utrzymujemy rozmiar nagłówka */
+        font-size: 1rem; 
     }
 
     .text-container p {
-        font-size: 0.75rem; /* Zmniejszamy czcionkę w paragrafie */
+        font-weight: bold;
+        font-size: 0.75rem; 
     }
 
     .btn-slide {
-        padding: 8px; /* Mniejsze przyciski na małych ekranach */
+        padding: 8px; 
     }
 }
