@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Funkcja przełączania trybu ciemnego/jasnego
     function toggleDarkMode() {
-        const html = document.documentElement; // Pobieramy <html>
+        const html = document.documentElement; // Pobieranie HTML
         const currentTheme = html.getAttribute('data-theme');
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         const navbarlinks = document.querySelector(".navbar-links");

@@ -16,10 +16,8 @@ function moveSlide(direction, sliderIndex) {
                 currentSlide = 0;
             }
 
-            // Ustaw atrybut data-current-slide na nowy indeks
             slider.setAttribute('data-current-slide', currentSlide);
 
-            // Ustaw transformację, aby przesunąć slajdy
             slider.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
     });
